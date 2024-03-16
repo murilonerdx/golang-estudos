@@ -14,9 +14,15 @@ func main() {
 		Cidade: "São Paulo",
 	}
 
-	fmt.Print(endereco)
-	endereco.Numero = 16
-	fmt.Print(endereco)
-	fmt.Print(endereco)
+	pessoa := model.Pessoa{
+		"Murilo P.S",
+		endereco,
+	}
+
+	//fmt.Print(endereco)
+	//endereco.Numero = 16
+	//fmt.Print(endereco)
+	//fmt.Print(endereco)
+	fmt.Print(pessoa)
 
 }
