@@ -21,6 +21,8 @@ func main() {
 	//	fmt.Println("Chave não existe!")
 	//}
 
+	delete(m, "uf")
+
 	if valor, existe := m[chave]; existe {
 		fmt.Println("chave:[", chave, "] valor:[", valor, "]")
 	} else {
