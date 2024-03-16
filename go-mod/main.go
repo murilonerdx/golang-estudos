@@ -1,22 +1,21 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"teste-go-mod/model"
+)
 
-type endereco struct {
-	rua    string
-	numero int
-	cidade string
-}
+var endereco model.Endereco
 
 func main() {
-	endereco := endereco{
-		rua:    "Rua x",
-		numero: 15,
-		cidade: "São Paulo",
+	endereco = model.Endereco{
+		Rua:    "Rua x",
+		Numero: 15,
+		Cidade: "São Paulo",
 	}
 
 	fmt.Print(endereco)
-	endereco.numero = 16
+	endereco.Numero = 16
 	fmt.Print(endereco)
 	fmt.Print(endereco)
 
