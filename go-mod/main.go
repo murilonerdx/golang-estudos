@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"teste-go-mod/model"
+	"time"
 )
 
 var endereco model.Endereco
@@ -17,6 +18,7 @@ func main() {
 	pessoa := model.Pessoa{
 		"Murilo P.S",
 		endereco,
+		time.Date(2001, 04, 21, 0, 0, 0, 0, time.Local),
 	}
 
 	//fmt.Print(endereco)
@@ -24,5 +26,9 @@ func main() {
 	//fmt.Print(endereco)
 	//fmt.Print(endereco)
 	fmt.Print(pessoa)
+	//idade := model.CaculaIdade(pessoa)
+	idade := pessoa.IdadeAtual()
+
+	fmt.Print("Pessoa tem ", idade, " anos")
 
 }
